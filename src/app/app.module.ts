@@ -30,15 +30,19 @@ import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 
 // Componentes do projeto
+import { NavComponent } from './components/nav/nav.component';
+
+
   
 
 
 // antes de iniciar o NG serve rodar o comando abaixo no bash
 // export NODE_OPTIONS=--openssl-legacy-provider 
-// nf serve
+// ng serve
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavComponent
   ],
   imports: [
 
