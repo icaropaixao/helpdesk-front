@@ -1,16 +1,23 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NavComponent } from './components/nav/nav.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 
 
 const routes: Routes = [
-
   {
-    path:'', component: NavComponent // quando a URL estiver vazia renderiza o NavComponent 
 
-  },
+    // Rota para NAV
+    path:'', component: NavComponent,
+    
+    // ROTA para HOME dentro de NAV
+    children:[{path:'home', component: HomeComponent}]
+
+    
+  }
+
 
 ];
 
