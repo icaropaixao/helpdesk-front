@@ -9,14 +9,32 @@
 
   <mat-form-field class="full-width" appearance="fill">
     <mat-label>Email</mat-label>
-    <input matInput placeholder="fulano@gmail.com">
+
+    <input
+    [formControl] ="email"
+    required
+    [(ngModel)]="creds.email"
+    name="email"
+    matInput
+    placeholder="fulano@gmail.com">
+
   </mat-form-field>
 
   <mat-form-field class="full-width" appearance="fill">
     <mat-label>Senha</mat-label>
-    <input type="password" matInput placeholder="Ex. 123..." value="">
+
+    <input [(ngModel)]="creds.senha"
+    [formControl] ="senha"
+    required
+    name="senha"
+    type="password"
+    matInput
+    placeholder="Ex. 123"
+    value="">
+
   </mat-form-field>
-  <button class="full-width mat-elevation-z6" mat-raised-button color="primary">Entrar</button>
+
+  <button [disabled]="!validaCampos()"  class="full-width mat-elevation-z6" mat-raised-button color="primary">Login</button>
 
 </form>
 
