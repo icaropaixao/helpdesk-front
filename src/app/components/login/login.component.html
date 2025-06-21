@@ -8,8 +8,8 @@
   <img src="assets\img\login-image.svg" alt="">
 
   <mat-form-field class="full-width" appearance="fill">
+    
     <mat-label>Email</mat-label>
-
     <input
     [formControl] ="email"
     required
@@ -21,8 +21,8 @@
   </mat-form-field>
 
   <mat-form-field class="full-width" appearance="fill">
-    <mat-label>Senha</mat-label>
 
+    <mat-label>Senha</mat-label>
     <input [(ngModel)]="creds.senha"
     [formControl] ="senha"
     required
