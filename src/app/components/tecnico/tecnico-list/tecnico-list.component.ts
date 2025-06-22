@@ -27,13 +27,15 @@ export class TecnicoListComponent implements OnInit {
   }
 
   findAll() {
-    this.service.findAll().subscribe(resposta => {
+      this.service.findAll().subscribe(resposta => {
       this.ELEMENT_DATA = resposta
       this.dataSource = new MatTableDataSource<Tecnico>(resposta);
       this.dataSource.paginator = this.paginator;
     })
   }
 
+
+  // FILTRO
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
